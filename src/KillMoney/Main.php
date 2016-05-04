@@ -33,5 +33,5 @@ $money="8";
 $player->sendMessage("You've Earned 8 Coins");
 $this->addMoney($player->getName(), $money);
 }
-
+}
 }
