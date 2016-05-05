@@ -5,6 +5,7 @@ use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
 use MassiveEconomy\MassiveEconomyAPI;
 use pocketmine\Player;
+use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\Server;
 use pocketmine\utils\TextFormat;
