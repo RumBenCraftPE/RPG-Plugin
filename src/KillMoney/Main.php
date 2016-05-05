@@ -22,7 +22,7 @@ class Main extends PluginBase implements Listener{
 	}
 	
 public function addMoney($name,$money){
-MassiveEconomyAPI::getInstance()->payPlayer($player->getName(), "8");
+MassiveEconomyAPI::getInstance()->payPlayer($player->getName(), $money);
 }
 
 public function onDeath(EntityDamageEvent $event){
