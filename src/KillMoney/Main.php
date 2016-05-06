@@ -9,6 +9,7 @@ use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\Server;
 use pocketmine\utils\TextFormat;
+use pocketmine\utils\Config;
 class Main extends PluginBase implements Listener{
 	public function onLoad(){
 		$this->getLogger()->info(TextFormat::WHITE . "KillMoney has been loaded!");
