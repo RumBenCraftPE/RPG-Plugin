@@ -30,7 +30,7 @@ MassiveEconomyAPI::getInstance()->payPlayer($player->getName(), $money);
 
 public function onDeath(EntityDamageEvent $event){
 $damage=$event->getDamage();
-$health=$event->getHealth();
+$health=$event->getDamager()->getHealth();
 if($health<=$damage){
 $player=$event->getDamager();
  $money = $this->getConfig()->get("money");
