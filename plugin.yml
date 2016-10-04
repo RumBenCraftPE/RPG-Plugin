@@ -3,3 +3,16 @@ main: KillMoney\Main
 version: 1.0.0
 api: 2.0.0
 author: CookieSteve
+commands:
+  xyz:
+    description: send you to your home
+    usage: "/home"
+  wizard:
+    description: Set a Players Home
+    usage: "/sethome"
+  warrior:
+    description: Set a Players Home
+    usage: "/sethome"
+  archer:
+    description: Set a Players Home
+    usage: "/sethome"
