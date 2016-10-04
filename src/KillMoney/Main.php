@@ -39,6 +39,42 @@ $this->addMoney($player->getName(), $money);
 }
 }
 	
+	
+	public function onCommand(CommandSender $player, Command $cmd, $label, array $args) {
+        switch($cmd->getName()){
+        case "wizard":
+		$p=$player->getName();
+        $config = new Config($this->getDataFolder() . "/classes.yml", Config::YAML);
+$class="Wizard";
+          $config->set($p,$class);
+					$config->save();
+					$player->sendMessage("You have choosen the Wizard Class");
+  return true;
+	case "warrior":
+			$p=$player->getName();
+        $config = new Config($this->getDataFolder() . "/classes.yml", Config::YAML);
+$class="Warrior";
+          $config->set($p,$class);
+					$config->save();
+					$player->sendMessage("You have choosen the Warrior Class");
+  return true;
+	case "archer":
+			$p=$player->getName();
+        $config = new Config($this->getDataFolder() . "/classes.yml", Config::YAML);
+$class="Archer";
+          $config->set($p,$class);
+					$config->save();
+					$player->sendMessage("You have choosen the Archer Class");
+  return true;
+  case "xyz":
+  	 $world=$player->getLevel()->getFolderName();
+        $x=round($player->getX());
+        $y=round($player->getY());
+        $z=round($player->getZ());
+			$player->sendMessage("{$world}Â§7, X:Â§9{$x}Â§7, Y:Â§9{$y}Â§7, Z:Â§9{$z}");
+			return true;
+	
+        }}
 	// RPG CLASSES FLOATINGTEXT START //
 	public function onJoin(PlayerJoinEvent $event){
 		$p=$event->getPlayer();
