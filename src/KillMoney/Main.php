@@ -141,6 +141,7 @@ $class="Archer";
 $clas=$class;
 				
 			}
+		 $world=$p->getLevel();
 		if($class="Wizard"){
 			
 		$level->addParticle(new FloatingTextParticle(new Vector3(146.5, 72, -1862.5),"", "§l§cSelected"));
