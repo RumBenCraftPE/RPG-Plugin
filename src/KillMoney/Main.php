@@ -36,7 +36,7 @@ use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\TranslationContainer;
 use pocketmine\entity\Human;
 use pocketmine\command\CommandSender;
-use pocketmine\utils\Config;
+use pocketmine\utils\{Config, TextFormat};
 use pocketmine\Player;
 use pocketmine\entity\Entity;
 use pocketmine\event\server\DataPacketReceiveEvent;
