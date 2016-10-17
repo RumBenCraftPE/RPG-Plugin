@@ -63,7 +63,7 @@ public function addMoney($name,$money){
 MassiveEconomyAPI::getInstance()->payPlayer($player->getName(), $money);
 }
 
-public function onDeath(EntityDamageEvent $event){
+public function onDeath(PlayerDeathEvent $event){
 $damage=$event->getDamage();
 $health=$event->getDamager()->getHealth();
 if($health<=$damage){
@@ -74,6 +74,18 @@ $this->addMoney($player->getName(), $money);
 }
 }
 	
+	
+public function onRealDeath(PlayerDeathEvent $event)
+    {
+        $player = $event->getPlayer();
+        $cause = $player->getLastDamageCause();
+        if ($cause instanceof EntityDamageByEntityEvent) {
+            $damager = $cause->getDamager();
+            if ($damager instanceof Player) {
+                $this->getServer()->getPluginManager()->getPlugin('EconomyAPI')->giveMoney($damager, 8);
+            }
+        }
+    }
 	
 	public function onCommand(CommandSender $player, Command $cmd, $label, array $args) {
         switch($cmd->getName()){
